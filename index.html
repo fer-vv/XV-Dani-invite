@@ -3,90 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mis XV Años</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<title>XV Años · Daniela Bastien Villaseñor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root { --l1:#f5effb; --l2:#e4d4f4; --l3:#c9a9e8; --l4:#9b72cf; --l5:#6a3fa0; --l6:#3d2266; }
+  :root { --l1:#f8f1fc; --l2:#ecdcf5; --l3:#dcc3ec; --l4:#c39fdc; --l5:#a77bc9; --l6:#7d4fa6; --l7:#4e2d6e;
+          --oro:#c9ab72; --oro-claro:#ecd9a8; --oro-osc:#a8864d; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:linear-gradient(180deg,var(--l1),var(--l2) 40%,var(--l3)); color:var(--l6);
-         font-family:'Cormorant Garamond',serif; text-align:center; min-height:100vh; overflow-x:hidden; }
-  section { position:relative; z-index:1; max-width:560px; margin:0 auto; padding:40px 22px; }
-  .script { font-family:'Great Vibes',cursive; color:var(--l5); }
-  h1 { font-size:4.4rem; line-height:1.05; margin:8px 0; text-shadow:0 2px 0 #fff; }
-  h2 { font-size:2.5rem; margin-bottom:10px; }
-  p { font-size:1.28rem; line-height:1.6; }
+  body { background:linear-gradient(180deg,var(--l1),var(--l2) 40%,var(--l3));
+         background-attachment:fixed; color:var(--l7); font-family:'Montserrat',sans-serif;
+         font-weight:400; text-align:center; min-height:100vh; overflow-x:hidden; }
+  section { position:relative; z-index:1; max-width:560px; margin:0 auto; padding:48px 24px 24px; }
 
-  /* Foto principal */
-  .retrato { width:230px; height:230px; margin:20px auto; border-radius:50%; padding:8px;
-             background:conic-gradient(var(--l4),var(--l2),var(--l5),var(--l3),var(--l4));
-             box-shadow:0 10px 30px rgba(106,63,160,.35); }
-  .retrato img { width:100%; height:100%; border-radius:50%; object-fit:cover; border:4px solid #fff; background:var(--l2); }
+  h1, h2, .nombre { font-family:'Cinzel',serif; font-weight:600; color:var(--l6); }
+  .intro { letter-spacing:.18em; text-transform:uppercase; font-size:.85rem; color:var(--l6); }
+  h1 { font-size:clamp(2.8rem,13vw,4.4rem); letter-spacing:.08em; line-height:1.1; margin:14px 0 4px;
+       background:linear-gradient(135deg,var(--l5),var(--l7) 60%,var(--l6));
+       -webkit-background-clip:text; background-clip:text; color:transparent; }
+  h2 { font-size:1.4rem; letter-spacing:.16em; text-transform:uppercase; margin-bottom:14px; }
+  p { font-size:1.05rem; line-height:1.8; }
+  .nombre { font-size:clamp(1.3rem,6vw,1.9rem); letter-spacing:.14em; line-height:1.4; margin:10px 0 0; }
 
-  /* Tarjetas con borde doble */
-  .marco { position:relative; background:rgba(255,255,255,.65); border:2px solid var(--l4);
-           border-radius:22px; padding:30px 20px; margin:28px 0;
-           box-shadow:0 0 0 6px rgba(201,169,232,.35), 0 12px 28px rgba(106,63,160,.18); }
-  .marco::before, .marco::after { content:"❀"; position:absolute; font-size:1.6rem; color:var(--l4);
-           background:var(--l1); border-radius:50%; width:34px; height:34px; line-height:34px; border:1px solid var(--l4); }
-  .marco::before { top:-17px; left:18px; }
-  .marco::after { bottom:-17px; right:18px; }
+  .divisor { display:block; width:240px; margin:18px auto; }
 
-  .divisor { display:block; width:220px; margin:14px auto; }
-  .cuenta { display:flex; justify-content:center; gap:12px; margin-top:16px; }
-  .cuenta div { min-width:64px; padding:8px 4px; border-radius:12px; background:var(--l5); color:#fff; font-size:.95rem; }
-  .cuenta b { display:block; font-size:2rem; }
+  /* Foto principal: aro dorado fino */
+  .retrato { width:230px; height:230px; margin:26px auto 10px; border-radius:50%; padding:4px;
+             background:linear-gradient(135deg,var(--oro-claro),var(--oro-osc),var(--oro-claro),var(--oro));
+             box-shadow:0 0 0 10px rgba(195,159,220,.30), 0 14px 30px rgba(125,79,166,.25); }
+  .retrato img { width:100%; height:100%; border-radius:50%; object-fit:cover;
+                 border:6px solid var(--l1); background:var(--l3); }
 
-  /* Galería */
+  /* Tarjetas lila con filete dorado */
+  .marco { position:relative; background:rgba(255,255,255,.55); border:1px solid var(--l4);
+           outline:1px solid rgba(201,171,114,.75); outline-offset:6px; border-radius:6px;
+           padding:38px 22px 32px; margin:44px 6px; box-shadow:0 10px 26px rgba(125,79,166,.12); }
+  .marco::before { content:"✦"; position:absolute; top:-15px; left:50%; transform:translateX(-50%);
+           background:var(--l2); color:var(--oro-osc); padding:0 12px; font-size:1.1rem; }
+
+  .cuenta { display:flex; justify-content:center; gap:10px; margin-top:22px; }
+  .cuenta div { min-width:66px; padding:10px 4px; border:1px solid var(--oro); border-radius:4px;
+                background:var(--l1); font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:var(--l6); }
+  .cuenta b { display:block; font-family:'Cinzel',serif; font-size:1.8rem; letter-spacing:0; color:var(--l7); }
+
   .galeria { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
-  .galeria img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:14px; border:3px solid #fff;
-                 box-shadow:0 4px 12px rgba(106,63,160,.25); background:var(--l2); }
+  .galeria img { width:100%; aspect-ratio:1; object-fit:cover; border:2px solid #fff;
+                 outline:1px solid var(--oro); border-radius:4px; background:var(--l3); }
 
-  .btn { display:inline-block; margin:8px; padding:12px 28px; border-radius:30px; background:var(--l5);
-         color:#fff; font-weight:600; font-size:1.15rem; text-decoration:none; box-shadow:0 6px 14px rgba(106,63,160,.35); }
-  .btn.sec { background:transparent; color:var(--l5); border:2px solid var(--l5); box-shadow:none; }
-  footer { position:relative; z-index:1; font-size:1.1rem; padding:30px; color:var(--l6); }
+  .btn { display:inline-block; margin:14px 6px 0; padding:13px 28px; border-radius:30px;
+         background:linear-gradient(135deg,var(--l5),var(--l6)); color:#fff; font-weight:500;
+         font-size:.8rem; letter-spacing:.2em; text-transform:uppercase; text-decoration:none;
+         border:1px solid var(--oro); box-shadow:0 6px 14px rgba(125,79,166,.3); }
+  .btn.sec { background:transparent; color:var(--l6); box-shadow:none; }
 
-  /* Pétalos y destellos cayendo */
-  .petalo { position:fixed; top:-40px; z-index:0; pointer-events:none; color:var(--l4); opacity:.55;
-            animation:caer linear infinite; }
-  @keyframes caer { to { transform:translateY(110vh) rotate(360deg); } }
+  footer { position:relative; z-index:1; padding:30px 24px 56px; letter-spacing:.14em;
+           text-transform:uppercase; font-size:.85rem; color:var(--l6); }
+  footer .nombre { display:block; font-size:1.3rem; margin-bottom:10px; }
 
-  /* Aparición suave */
-  .marco, .retrato, h1 { animation:subir .9s ease both; }
-  @keyframes subir { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+  /* Destellos dorados */
+  .destello { position:fixed; top:-30px; z-index:0; pointer-events:none; color:var(--oro);
+              opacity:.5; animation:caer linear infinite; }
+  @keyframes caer { to { transform:translateY(110vh) rotate(180deg); } }
+
+  .marco, .retrato, h1 { animation:subir 1s ease both; }
+  @keyframes subir { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
 </style>
 </head>
 <body>
 
 <section>
-  <p>Con mucha alegría te invito a celebrar</p>
-  <h1 class="script">Mis XV Años</h1>
+  <p class="intro">Con mucha alegría te invito a celebrar</p>
+  <h1>Mis XV Años</h1>
 
-  <svg class="divisor" viewBox="0 0 220 24" fill="none" stroke="#9b72cf" stroke-width="1.5">
-    <path d="M5 12h80M135 12h80"/><circle cx="110" cy="12" r="5" fill="#c9a9e8"/>
-    <circle cx="92" cy="12" r="2.5" fill="#9b72cf"/><circle cx="128" cy="12" r="2.5" fill="#9b72cf"/>
+  <svg class="divisor" viewBox="0 0 240 24" fill="none" stroke="#c9ab72" stroke-width="1">
+    <path d="M6 12h92M142 12h92"/>
+    <path d="M120 3l9 9-9 9-9-9z" fill="#c9ab72"/>
+    <circle cx="104" cy="12" r="2" fill="#c9ab72"/><circle cx="136" cy="12" r="2" fill="#c9ab72"/>
   </svg>
 
   <div class="retrato">
-    <img src="foto-principal.jpg" alt="Quinceañera" onerror="this.style.visibility='hidden'">
+    <img src="foto-principal.jpg" alt="Daniela" onerror="this.style.visibility='hidden'">
   </div>
-  <h2 class="script">DANIELA BASTIEN VILLASEÑOR</h2>
+  <p class="nombre">DANIELA BASTIEN VILLASEÑOR</p>
 
   <div class="marco">
-    <h2 class="script">Fecha</h2>
+    <h2>Fecha</h2>
     <p>Domingo 6 de diciembre de 2026<br>7:00 p. m.</p>
     <div class="cuenta" id="cuenta"></div>
   </div>
 
   <div class="marco">
-    <h2 class="script">Lugar</h2>
+    <h2>Lugar</h2>
     <p>Salón Bambú<br>Boulevard García de León 1111, 58260 Morelia, Mich.</p>
     <a class="btn sec" target="_blank" rel="noopener"
        href="https://www.google.com.mx/maps/place/Bamb%C3%BA/@19.6895382,-101.1705014,17z/data=!3m1!4b1!4m6!3m5!1s0x842d0dfc03ed97cf:0x93943f811014af1d!8m2!3d19.6895382!4d-101.1679265!16s%2Fg%2F11cm16bx8s?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D">Ver mapa</a>
   </div>
 
   <div class="marco">
-    <h2 class="script">Mi historia</h2>
+    <h2>Mi historia</h2>
     <div class="galeria">
       <img src="foto1.jpg" alt="" onerror="this.style.visibility='hidden'">
       <img src="foto2.jpg" alt="" onerror="this.style.visibility='hidden'">
@@ -95,23 +107,27 @@
   </div>
 
   <div class="marco">
-    <h2 class="script">Vestimenta</h2>
-    <p>Formal. El color lila se reserva para la quinceañera.</p>
+    <h2>Vestimenta</h2>
+    <p>Formal.<br>El color lila se reserva para la quinceañera.</p>
   </div>
 
   <div class="marco">
-    <h2 class="script">¿Me acompañas?</h2>
-    <p>Confirma tu asistencia antes del 1 de diciembre.</p>
+    <h2>Confirmación</h2>
+    <p>Por favor confirma tu asistencia antes del 1 de diciembre.</p>
     <a class="btn" id="confirmar" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
   </div>
 </section>
-<footer class="script" style="font-size:2rem">Tu presencia es el mejor regalo</footer>
+
+<footer>
+  <span class="nombre">Daniela</span>
+  Tu presencia es el mejor regalo
+</footer>
 
 <script>
   // ===== EDITA ESTOS DATOS =====
-  const FECHA_EVENTO = new Date("2026-12-20T19:00:00-06:00");
+  const FECHA_EVENTO = new Date("2026-12-06T19:00:00-06:00");
   const WHATSAPP = "524431234567"; // lada país + número, sin + ni espacios
-  const MENSAJE = "¡Hola! Confirmo mi asistencia a los XV años. Somos ___ personas.";
+  const MENSAJE = "¡Hola! Confirmo mi asistencia a los XV años de Daniela. Somos ___ personas.";
   // =============================
 
   document.getElementById("confirmar").href =
@@ -128,16 +144,15 @@
   }
   actualizar(); setInterval(actualizar, 1000);
 
-  // Pétalos y destellos decorativos
-  const simbolos = ["❀", "✿", "✦", "❁", "✧"];
-  for (let i = 0; i < 16; i++) {
+  // Destellos dorados decorativos
+  for (let i = 0; i < 12; i++) {
     const e = document.createElement("span");
-    e.className = "petalo";
-    e.textContent = simbolos[i % simbolos.length];
+    e.className = "destello";
+    e.textContent = i % 2 ? "✦" : "✧";
     e.style.left = Math.random() * 100 + "vw";
-    e.style.fontSize = (14 + Math.random() * 18) + "px";
-    e.style.animationDuration = (10 + Math.random() * 12) + "s";
-    e.style.animationDelay = (-Math.random() * 20) + "s";
+    e.style.fontSize = (10 + Math.random() * 14) + "px";
+    e.style.animationDuration = (16 + Math.random() * 16) + "s";
+    e.style.animationDelay = (-Math.random() * 30) + "s";
     document.body.appendChild(e);
   }
 </script>
