@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis XV Años</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --l1:#f5effb; --l2:#e4d4f4; --l3:#c9a9e8; --l4:#9b72cf; --l5:#6a3fa0; --l6:#3d2266; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:linear-gradient(180deg,var(--l1),var(--l2) 40%,var(--l3)); color:var(--l6);
+         font-family:'Cormorant Garamond',serif; text-align:center; min-height:100vh; overflow-x:hidden; }
+  section { position:relative; z-index:1; max-width:560px; margin:0 auto; padding:40px 22px; }
+  .script { font-family:'Great Vibes',cursive; color:var(--l5); }
+  h1 { font-size:4.4rem; line-height:1.05; margin:8px 0; text-shadow:0 2px 0 #fff; }
+  h2 { font-size:2.5rem; margin-bottom:10px; }
+  p { font-size:1.28rem; line-height:1.6; }
+
+  /* Foto principal */
+  .retrato { width:230px; height:230px; margin:20px auto; border-radius:50%; padding:8px;
+             background:conic-gradient(var(--l4),var(--l2),var(--l5),var(--l3),var(--l4));
+             box-shadow:0 10px 30px rgba(106,63,160,.35); }
+  .retrato img { width:100%; height:100%; border-radius:50%; object-fit:cover; border:4px solid #fff; background:var(--l2); }
+
+  /* Tarjetas con borde doble */
+  .marco { position:relative; background:rgba(255,255,255,.65); border:2px solid var(--l4);
+           border-radius:22px; padding:30px 20px; margin:28px 0;
+           box-shadow:0 0 0 6px rgba(201,169,232,.35), 0 12px 28px rgba(106,63,160,.18); }
+  .marco::before, .marco::after { content:"❀"; position:absolute; font-size:1.6rem; color:var(--l4);
+           background:var(--l1); border-radius:50%; width:34px; height:34px; line-height:34px; border:1px solid var(--l4); }
+  .marco::before { top:-17px; left:18px; }
+  .marco::after { bottom:-17px; right:18px; }
+
+  .divisor { display:block; width:220px; margin:14px auto; }
+  .cuenta { display:flex; justify-content:center; gap:12px; margin-top:16px; }
+  .cuenta div { min-width:64px; padding:8px 4px; border-radius:12px; background:var(--l5); color:#fff; font-size:.95rem; }
+  .cuenta b { display:block; font-size:2rem; }
+
+  /* Galería */
+  .galeria { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .galeria img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:14px; border:3px solid #fff;
+                 box-shadow:0 4px 12px rgba(106,63,160,.25); background:var(--l2); }
+
+  .btn { display:inline-block; margin:8px; padding:12px 28px; border-radius:30px; background:var(--l5);
+         color:#fff; font-weight:600; font-size:1.15rem; text-decoration:none; box-shadow:0 6px 14px rgba(106,63,160,.35); }
+  .btn.sec { background:transparent; color:var(--l5); border:2px solid var(--l5); box-shadow:none; }
+  footer { position:relative; z-index:1; font-size:1.1rem; padding:30px; color:var(--l6); }
+
+  /* Pétalos y destellos cayendo */
+  .petalo { position:fixed; top:-40px; z-index:0; pointer-events:none; color:var(--l4); opacity:.55;
+            animation:caer linear infinite; }
+  @keyframes caer { to { transform:translateY(110vh) rotate(360deg); } }
+
+  /* Aparición suave */
+  .marco, .retrato, h1 { animation:subir .9s ease both; }
+  @keyframes subir { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+
+<section>
+  <p>Con mucha alegría te invito a celebrar</p>
+  <h1 class="script">Mis XV Años</h1>
+
+  <svg class="divisor" viewBox="0 0 220 24" fill="none" stroke="#9b72cf" stroke-width="1.5">
+    <path d="M5 12h80M135 12h80"/><circle cx="110" cy="12" r="5" fill="#c9a9e8"/>
+    <circle cx="92" cy="12" r="2.5" fill="#9b72cf"/><circle cx="128" cy="12" r="2.5" fill="#9b72cf"/>
+  </svg>
+
+  <div class="retrato">
+    <img src="foto-principal.jpg" alt="Quinceañera" onerror="this.style.visibility='hidden'">
+  </div>
+  <h2 class="script">NOMBRE DE LA QUINCEAÑERA</h2>
+
+  <div class="marco">
+    <h2 class="script">Fecha</h2>
+    <p>Sábado 20 de diciembre de 2026<br>7:00 p. m.</p>
+    <div class="cuenta" id="cuenta"></div>
+  </div>
+
+  <div class="marco">
+    <h2 class="script">Lugar</h2>
+    <p>Salón NOMBRE DEL SALÓN<br>Calle y número, Morelia, Mich.</p>
+    <a class="btn sec" target="_blank" rel="noopener"
+       href="https://www.google.com/maps/search/?api=1&query=Morelia+Michoacan">Ver mapa</a>
+  </div>
+
+  <div class="marco">
+    <h2 class="script">Mi historia</h2>
+    <div class="galeria">
+      <img src="foto1.jpg" alt="" onerror="this.style.visibility='hidden'">
+      <img src="foto2.jpg" alt="" onerror="this.style.visibility='hidden'">
+      <img src="foto3.jpg" alt="" onerror="this.style.visibility='hidden'">
+    </div>
+  </div>
+
+  <div class="marco">
+    <h2 class="script">Vestimenta</h2>
+    <p>Formal. El color lila se reserva para la quinceañera.</p>
+  </div>
+
+  <div class="marco">
+    <h2 class="script">¿Me acompañas?</h2>
+    <p>Confirma tu asistencia antes del 1 de diciembre.</p>
+    <a class="btn" id="confirmar" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+  </div>
+</section>
+<footer class="script" style="font-size:2rem">Tu presencia es el mejor regalo</footer>
+
+<script>
+  // ===== EDITA ESTOS DATOS =====
+  const FECHA_EVENTO = new Date("2026-12-20T19:00:00-06:00");
+  const WHATSAPP = "524431234567"; // lada país + número, sin + ni espacios
+  const MENSAJE = "¡Hola! Confirmo mi asistencia a los XV años. Somos ___ personas.";
+  // =============================
+
+  document.getElementById("confirmar").href =
+    "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAJE);
+
+  function actualizar() {
+    const dif = FECHA_EVENTO - new Date();
+    const cont = document.getElementById("cuenta");
+    if (dif <= 0) { cont.innerHTML = "<p>¡Hoy es la fiesta!</p>"; return; }
+    const d = Math.floor(dif / 864e5), h = Math.floor(dif / 36e5) % 24,
+          m = Math.floor(dif / 6e4) % 60, s = Math.floor(dif / 1e3) % 60;
+    cont.innerHTML = [["días", d], ["horas", h], ["min", m], ["seg", s]]
+      .map(([t, v]) => "<div><b>" + v + "</b>" + t + "</div>").join("");
+  }
+  actualizar(); setInterval(actualizar, 1000);
+
+  // Pétalos y destellos decorativos
+  const simbolos = ["❀", "✿", "✦", "❁", "✧"];
+  for (let i = 0; i < 16; i++) {
+    const e = document.createElement("span");
+    e.className = "petalo";
+    e.textContent = simbolos[i % simbolos.length];
+    e.style.left = Math.random() * 100 + "vw";
+    e.style.fontSize = (14 + Math.random() * 18) + "px";
+    e.style.animationDuration = (10 + Math.random() * 12) + "s";
+    e.style.animationDelay = (-Math.random() * 20) + "s";
+    document.body.appendChild(e);
+  }
+</script>
+</body>
+</html>
